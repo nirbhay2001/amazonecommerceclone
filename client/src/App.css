@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400;600&family=Josefin+Sans:wght@200&family=Josefin+Slab:ital,wght@0,100;1,200&family=Merriweather:wght@700&family=Open+Sans:wght@400;500;600&family=PT+Sans&family=Piazzolla:wght@600&family=Quicksand:wght@500&family=Roboto:ital,wght@0,400;0,900;1,700&family=Shadows+Into+Light&family=Ubuntu:ital@0;1&display=swap');
+
+/* *{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+} */
+
+body{
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+.circle{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle h2{
+  margin-left: 10px;
+}

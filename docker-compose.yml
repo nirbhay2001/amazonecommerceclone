@@ -1,0 +1,34 @@
+version: '3'
+services:
+  frontend:
+    build:
+      context: './client'
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    container_name: react-container
+    environment:
+      - WATCHPACK_POLLING=true
+    networks:
+      - mern-stack-network
+    volumes:
+      - ./client:/app
+    depends_on:
+      - backend
+
+  backend:
+    build:
+      context: './server'
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    container_name: express-container
+    environment:
+      - MONGO_URI=${MONGO_URI}  # MongoDB Atlas connection string from .env file
+    networks:
+      - mern-stack-network
+    volumes:
+      - ./server:/app
+
+networks:
+  mern-stack-network:
