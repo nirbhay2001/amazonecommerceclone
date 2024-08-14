@@ -3,7 +3,7 @@ services:
   frontend:
     build:
       context: './client'
-      dockerfile: Dockerfile
+      dockerfile: ./client/Dockerfile
     ports:
       - "3000:3000"
     container_name: react-container
@@ -19,7 +19,7 @@ services:
   backend:
     build:
       context: './server'
-      dockerfile: Dockerfile
+      dockerfile: ./server/Dockerfile
     ports:
       - "5000:5000"
     container_name: express-container
